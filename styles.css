@@ -977,18 +977,65 @@
 .mini-link-row a:hover { border-color: #7c3aed; color: #a78bfa; }
 
 @media (max-width: 760px) {
-  .nav-brand { flex: 0 1 auto; min-width: 0; }
+  .nav-brand { flex: 1 1 100%; min-width: 0; justify-content: center; }
   .brand-stack { flex-direction: column; align-items: flex-start; gap: 0.05rem; line-height: 1.05; }
   .brand-name { font-size: 14px; }
   .brand-by { font-size: 11px; }
   .page-hero { padding: 4rem 1rem 3rem; }
-  .page-hero h1, .article h1 { font-size: 36px; }
-  .page-section, .article { padding-left: 1rem; padding-right: 1rem; }
+  .page-hero h1, .article h1 {
+    font-size: 30px;
+    overflow-wrap: anywhere;
+  }
+  .article h2 {
+    font-size: 23px;
+    overflow-wrap: anywhere;
+  }
+  .article p,
+  .article li {
+    font-size: 14px;
+  }
+  .page-section, .article { padding-left: 1rem; padding-right: 2.5rem; }
+  .nav-guide-cta,
+  .nav-cta,
+  .btn-primary,
+  .btn-secondary,
+  .mini-link-row a {
+    min-width: 0;
+  }
+  .nav-guide-cta,
+  .nav-cta {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .mini-link-row {
+    gap: 0.65rem;
+  }
+  .mini-link-row a {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .content-grid,
+  .seo-grid,
+  .blog-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
   .hero h1 { font-size: 34px; }
-  .page-hero h1, .article h1 { font-size: 32px; }
+  .page-hero h1, .article h1 { font-size: 28px; }
+  .nav-guide-cta,
+  .nav-cta {
+    flex-basis: 100%;
+    width: 100%;
+  }
+  .mini-link-row {
+    gap: 0.65rem;
+  }
+  .mini-link-row a {
+    flex: 1 1 100%;
+    text-align: center;
+  }
   .rank-badge { border-radius: 16px; justify-content: center; flex-wrap: wrap; line-height: 1.4; }
   .hero p, .page-hero p { font-size: 16px; }
   .hero-btns .btn-primary, .hero-btns .btn-secondary { width: 100%; flex-basis: 100%; padding-left: 18px; padding-right: 18px; }
